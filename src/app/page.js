@@ -15,7 +15,9 @@ export default function Home() {
           <p className="">
             I'm a professional Software Engineer and UX Designer. 
             I help businesses to craft user-centered interfaces that meet business needs. 
-            <br/>I thrive in collaborative environments and love tackling complex challenges that 
+          </p>
+          <p>
+            I thrive in collaborative environments and love tackling complex challenges that 
             reflect user needs and piques consumers' grow interests.
             Let's connect and chat about your design and development needs!
           </p>
