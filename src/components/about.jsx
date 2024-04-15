@@ -8,7 +8,10 @@ import { useRef } from 'react'
 const About = () => {
     const containerRef = useRef();
     const skillRef = useRef();
-    const isSkillRefInView = useInView(skillRef); //
+    const isSkillRefInView = useInView(skillRef);
+    
+    const experienceRef = useRef();
+    const isExperienceRefInView = useInView(experienceRef);//
 
     const { scrollYProgress } = useScroll({ container: containerRef });
   return (
@@ -48,7 +51,7 @@ const About = () => {
             </div>
             <div className='flex flex-col gap-12 justify-center' ref={skillRef}>
                 <motion.h1 initial={{x:'-300px'}} animate={isSkillRefInView ? {x:0} : {}} transition={{delay:0.2}} className='font-bold text-2xl'>SKILLS</motion.h1>
-                <div className='flex gap-4 flex-wrap'>
+                <motion.div initial={{x:'-300px'}} animate={isSkillRefInView ? {x:0} : {}} className='flex gap-4 flex-wrap'>
                     <div className='rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black'>
                         Javascript
                     </div>
@@ -133,7 +136,7 @@ const About = () => {
                     <div className='rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black'>
                         Mobile Design
                     </div>
-                </div>
+                </motion.div>
                 <div className=''>
                     <motion.svg
                         initial={{ opacity: 0.2, y: 0 }}
@@ -159,8 +162,8 @@ const About = () => {
                     </motion.svg>
                 </div>
             </div>
-            <div className='flex flex-col gap-12 justify-center'>
-                <h1 className='font-bold text-2xl'>Experience</h1>
+            <div className='flex flex-col gap-12 justify-center' ref={experienceRef}>
+                <motion.h1 className='font-bold text-2xl' initial={{x:'-300px'}} animate={isExperienceRefInView ? {x:0} : {}} transition={{delay:0.2}}>Experience</motion.h1>
             </div>
         </div>
         <div className='hidden lg:block w-1/3 xl:1/2 sticky top-0'>
