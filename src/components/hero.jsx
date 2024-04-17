@@ -2,6 +2,7 @@
 import { animate, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import LinkArrow from "./linkArrow";
 
 const quote = {
   initial: {
@@ -65,8 +66,8 @@ const Hero = () => {
             Let's connect and chat about your design and development needs!
           </p>
           <div className="flex flex-row gap-4">
-            <Link download={true} href='/#' className="p-2.5 px-6 text-lg font-semibold hover:bg-white hover:text-black rounded-lg ring-1 ring-white bg-black text-white">My Resume</Link>
-            <Link href='/#' className="p-2.5 px-6 text-lg font-semibold hover:bg-black hover:text-white rounded-lg ring-1 ring-black bg-white text-black">Contact Me</Link>
+            <Link download={true} href='/#' className="flex items-center justify-center py-2 px-8 text-lg font-semibold hover:bg-white hover:text-black rounded-lg ring-1 ring-white bg-black text-white">My Resume <LinkArrow className='w-6 h-4 ml-1'/></Link>
+            <Link href='/#' className="flex items-center justify-center py-2 px-8 text-lg font-semibold hover:bg-black hover:text-white rounded-lg ring-1 ring-black bg-white text-black">Contact Me</Link>
           </div>
         </div>
     </div>

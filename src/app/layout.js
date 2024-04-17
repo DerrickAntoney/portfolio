@@ -4,6 +4,8 @@ import "./globals.css";
 
 import Navbar from "../components/navbar";
 import SmoothScrolling from "@/components/smoothScrolling";
+import Footer from "@/components/footer";
+import EngageMe from "@/components/engageMe";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +26,11 @@ export default function RootLayout({ children }) {
               <div className="">
                 {children}
               </div>
+              <div className="h-12">
+                <Footer/>
+              </div>
             </div>
+            <EngageMe/>
         </SmoothScrolling>
         
       </body>
