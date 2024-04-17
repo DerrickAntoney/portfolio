@@ -39,7 +39,7 @@ const Hero = () => {
           <Image src='/profile.png' alt="profile picture" width={300} height={300} className="object-contain rounded-full mx-8 sm:mx-12 md:mx-16 lg:mx-20"/>
         </div>
         <div className=" md:w-[50%] flex flex-col gap-4 md:justify-center">
-          <motion.h1 className="font-bold text-3xl md:text-4xl"
+          <motion.h1 className="font-bold text-xl md:text-4xl"
           variants={quote}
           >
            {
