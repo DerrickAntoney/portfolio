@@ -22,8 +22,8 @@ const Contact = () => {
       setSuccess(false);
   
       emailjs
-        .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
-          publicKey: KEY,
+        .sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, {
+          publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
         })
         .then(
           (result) => {
