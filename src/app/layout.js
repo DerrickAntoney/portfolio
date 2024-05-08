@@ -6,6 +6,7 @@ import Navbar from "../components/navbar";
 import SmoothScrolling from "@/components/smoothScrolling";
 import Footer from "@/components/footer";
 import EngageMe from "@/components/engageMe";
+import Script from "next/script";
 
 const dmSan = DM_Sans({ subsets: ["latin"] });
 
@@ -21,8 +22,15 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" sizes="32*32" />
       </head>
       <body className={dmSan.className}>
+        <Script id="theme-switcher" strategy="afterInteractive">
+           {`if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+          } else {
+            document.documentElement.classList.remove('dark')
+          }`}
+        </Script>
         <SmoothScrolling>
-            <div className="w-screen h-full bg-gradient-to-b from-blue-100 to-red-100">
+            <div className="w-screen h-full">
               <div className="h-24">
                 <Navbar/>
               </div>

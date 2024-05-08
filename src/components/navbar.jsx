@@ -5,6 +5,7 @@ import { useState } from 'react'
 import NavLink from './navLink'
 import { motion } from 'framer-motion'
 import Socials from './socials'
+import useThemeSwitcher from './hooks/useThemeSwitcher'
 
 const navbar = () => {
 
@@ -71,7 +72,7 @@ const navbar = () => {
     }
 
   return (
-    <div className='h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48'>
+    <div className='h-full flex items-center dark:bg-bluish dark:text-light justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48'>
        <div className='hidden md:flex gap-4 w-1/3 text-xl'>
         {links.map(link=>(
             <NavLink link={link} key={link.url} className='text-gray-900 dark:text-gray-100 hover:text-gray-800 dark:hover:text-gray-200'>
@@ -81,7 +82,7 @@ const navbar = () => {
        </div>
        <div className='sm:hidden md:flex w-1/3 justify-center'>
         <MotionLink href="/" 
-        className='text-bold bg-black p-3 text-white rounded-full'
+        className='text-bold bg-black p-3 text-white rounded-full border border-solid border-transparent dark:border-light'
         whileHover={{backgroundColor:["#121212", "rgba(131,58,180,1)","rgba(253,29,29,1)","rgba(252,176,69,1)","rgba(131,58,180,1)", "#121212"],
         transition:{duration:1, repeat:Infinity}
     }}
@@ -89,7 +90,7 @@ const navbar = () => {
             DA
         </MotionLink>
        </div>
-       <Socials className={'hidden md:flex gap-4 w-1/3 justify-end'}/>
+       <Socials className={'hidden md:flex gap-4 w-1/3 justify-end items-center'}/>
        <div className='md:hidden'>
             <button className='z-50 relative justify-between w-10 h-8 flex flex-col' onClick={()=> setOpen((prev)=>!prev)}>
                 <motion.div animate={open ? "opened" : "closed"} variants={topVariants} className='w-10 h-1 bg-black rounded-md origin-left'></motion.div>

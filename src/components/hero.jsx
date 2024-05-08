@@ -34,7 +34,7 @@ const singleWord = {
 const Hero = () => {
     const text="Hi there, I'm Derrick Antoney!"
   return (
-    <div className="h-full flex flex-col md:flex-row gap-10 px-4 sm:px-8 md:px-12 lg:px-20">
+    <div className="h-full flex flex-col md:flex-row gap-10 px-4 sm:px-8 md:px-12 dark:bg-bluish dark:text-light lg:px-20">
         <div className="">
           <Image src='/profile.png' alt="profile picture" width={300} height={300} className="object-contain rounded-full mx-8 sm:mx-12 md:mx-16 lg:mx-20"/>
         </div>
