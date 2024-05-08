@@ -66,8 +66,8 @@ const Hero = () => {
             Let's connect and chat about your design and development needs!
           </p>
           <div className="flex flex-row gap-4">
-            <Link download={true} href='/Derrick Antoney-Resume.pdf' className="flex items-center justify-center p-2.5 px-6 md:text-lg font-semibold hover:bg-white hover:text-black rounded-lg ring-1 ring-white bg-black text-white">My Resume <LinkArrow className='w-4 ml-1'/></Link>
-            <Link href='/#' className="flex items-center text-sm justify-center p-2.5 px-6 md:text-lg font-semibold hover:bg-black hover:text-white rounded-lg ring-1 ring-black bg-white text-black">Contact Me</Link>
+            <Link download={true} href='/Derrick Antoney-Resume.pdf' className="flex items-center justify-center p-2 px-6 text-md md:text-lg font-semibold hover:bg-white hover:text-black rounded-lg ring-1 ring-white bg-black text-white">Resume<LinkArrow className='w-4 ml-1'/></Link>
+            <Link href='/#' className="flex items-center text-sm justify-center p-2.5 px-6 text-md md:text-lg font-semibold hover:bg-black hover:text-white rounded-lg ring-1 ring-black bg-white text-black">Contact</Link>
           </div>
         </div>
     </div>
