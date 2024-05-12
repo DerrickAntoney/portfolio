@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" sizes="32*32" />
       </head>
       <body className={dmSan.className}>
-        <Script id="theme-switcher" strategy="afterInteractive">
+        <Script id="theme-switcher" strategy="beforeInteractive">
            {`if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark')
           } else {
@@ -41,7 +41,6 @@ export default function RootLayout({ children }) {
                 <Footer/>
               </div>
             </div>
-            <EngageMe/>
         </SmoothScrolling>
         
       </body>

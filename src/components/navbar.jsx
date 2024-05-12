@@ -13,9 +13,9 @@ const navbar = () => {
 
     const links = [
         {url: "/", title:"Home"},
-        {url: "/about", title:"About"},
-        {url: "/portfolio", title:"Portfolio"},
-        {url: "/contact", title:"Contact"}
+        {url: "#about", title:"About"},
+        {url: "#project", title:"Portfolio"},
+        {url: "#contact", title:"Contact"}
     ]
 
     const [open, setOpen] = useState(false);
@@ -72,17 +72,17 @@ const navbar = () => {
     }
 
   return (
-    <div className='h-full flex items-center dark:bg-bluish dark:text-light justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48'>
+    <div className='h-full flex items-center bg-backcolor dark:bg-bluish dark:text-light justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48'>
        <div className='hidden md:flex gap-4 w-1/3 text-xl'>
         {links.map(link=>(
-            <NavLink link={link} key={link.url} className='text-gray-900 dark:text-gray-100 hover:text-gray-800 dark:hover:text-gray-200'>
+            <NavLink link={link} key={link.url} className='text-darkish dark:text-light hover:text-gray dark:hover:text-graywhite'>
                 {link.title}
             </NavLink>
         ))}
        </div>
        <div className='sm:hidden md:flex w-1/3 justify-center'>
         <MotionLink href="/" 
-        className='text-bold bg-black p-3 text-white rounded-full border border-solid border-transparent dark:border-light'
+        className='text-bold bg-darkish p-3 text-light rounded-full border border-solid border-backcolor dark:border-light'
         whileHover={{backgroundColor:["#121212", "rgba(131,58,180,1)","rgba(253,29,29,1)","rgba(252,176,69,1)","rgba(131,58,180,1)", "#121212"],
         transition:{duration:1, repeat:Infinity}
     }}
@@ -93,17 +93,17 @@ const navbar = () => {
        <Socials className={'hidden md:flex gap-4 w-1/3 justify-end items-center'}/>
        <div className='md:hidden'>
             <button className='z-50 relative justify-between w-10 h-8 flex flex-col' onClick={()=> setOpen((prev)=>!prev)}>
-                <motion.div animate={open ? "opened" : "closed"} variants={topVariants} className='w-10 h-1 bg-black rounded-md origin-left'></motion.div>
-                <motion.div animate={open ? "opened" : "closed"} variants={centerVariants} className='w-10 h-1 bg-black rounded-md'></motion.div>
-                <motion.div animate={open ? "opened" : "closed"} variants={bottomVariants} className='w-10 h-1 bg-black rounded-md origin-left'></motion.div> 
+                <motion.div animate={open ? "opened" : "closed"} variants={topVariants} className='w-10 h-1 bg-darkish dark:bg-gray rounded-md origin-left'></motion.div>
+                <motion.div animate={open ? "opened" : "closed"} variants={centerVariants} className='w-10 h-1 bg-darkish dark:bg-gray rounded-md'></motion.div>
+                <motion.div animate={open ? "opened" : "closed"} variants={bottomVariants} className='w-10 h-1 bg-darkish dark:bg-gray rounded-md origin-left'></motion.div> 
             </button>
             {open && (
-                <motion.div variants={listVariants} initial='closed' animate='opened' className='absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl '>
+                <motion.div variants={listVariants} initial='closed' animate='opened' className='absolute top-0 left-0 w-screen h-[90%] text-darkish dark:text-light bg-darkish rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-50 border border-graywhite flex flex-col items-center justify-center gap-8 text-4xl '>
                     {links.map(link =>
                     <motion.div className='' variants={listItemVariants} key={link.url}>
-                        <Link href={link.url} className='p-3 text-white rounded-full'>
+                        <a href={link.url} className='p-3 text-white rounded-full'>
                         {link.title}
-                        </Link>
+                        </a>
                     </motion.div>
                     )
                     }

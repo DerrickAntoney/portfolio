@@ -8,9 +8,19 @@ module.exports = {
   darkMode: 'selector',
   theme: {
     colors: {
-      bluish: '#000023',
+      bluish: '#052955',
       light: '#ffffff',
       darkish: '#000000',
+      blukish: '#00FFFF',
+      backcolor: '#f0f9ff',
+      gray: '#737373',
+      graywhite: '#e5e7eb',
+      bluen: '#bfdbfe',
+      cyan: '#0891b2',
+      cyan2: '#22d3ee',
+      transparent: 'transparent',
+      red: '#dc2626',
+      green: '#16a34a',
     },
     extend: {
       backgroundImage: {
