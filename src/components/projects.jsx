@@ -64,7 +64,7 @@ const projects = () => {
   return (
     <div id='project' className='px-4 sm:px-8 md:px-12 lg:px-20 bg-backcolor dark:bg-bluish dark:text-light'>
     <motion.h1 className='font-bold text-2xl mb-5' initial={{x:'-300px'}} ref={projectsRef} animate={isProjectsRefInView ? {x:0} : {}} transition={{delay:0.2}}>Portfolio Projects</motion.h1>
-    <div className='grid grid-cols-12 md:gap-24 gap-12 md:gap-y-32 lg:gap-x-16 md:gap-x-8 gap-y-24 gap-x-0'>
+    <div className='grid grid-cols-12 md:gap-24 gap-8 md:gap-y-32 lg:gap-x-16 md:gap-x-8 gap-x-0'>
         <div className='col-span-12'>
             <FeaturedProject
             title='Cabinet Manufacturer Website'
