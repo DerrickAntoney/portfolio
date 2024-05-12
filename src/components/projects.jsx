@@ -79,7 +79,7 @@ const projects = () => {
             <Project
                 title='Social Media Application'
                 img={socialmui}
-                link='https://socialmui.com/'
+                link='https://socialmui.vercel.app/'
                 github='https://github.com/DerrickAntoney/socialmui'
                 type='Featured Project'
                 />

@@ -101,7 +101,7 @@ const navbar = () => {
                 <motion.div variants={listVariants} initial='closed' animate='opened' className='absolute top-0 left-0 w-screen h-[90%] text-darkish dark:text-light bg-darkish rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-50 border border-graywhite flex flex-col items-center justify-center gap-8 text-4xl '>
                     {links.map(link =>
                     <motion.div className='' variants={listItemVariants} key={link.url}>
-                        <a href={link.url} className='p-3 text-white rounded-full'>
+                        <a href={link.url} className='p-3 text-light rounded-full'>
                         {link.title}
                         </a>
                     </motion.div>
