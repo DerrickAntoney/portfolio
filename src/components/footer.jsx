@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='w-full border-t-2 border-solid border-darkish dark:border-light dark:bg-bluish font-medium text-lg'>
+    <footer className='w-full border-t-2 border-solid border-darkish dark:border-light bg-backcolor dark:bg-bluish font-medium text-lg'>
       <layout className='flex flex-col items-center justify-center py-6 '>
         <div>
           <span className='dark:text-light'>{new Date().getFullYear()}</span>
