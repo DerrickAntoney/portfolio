@@ -12,13 +12,13 @@ import { useInView, motion } from 'framer-motion'
 const FeaturedProject = ({type, title, summary, img, link, github}) => {
 
     return (
-        <article className='w-full relative flex flex-col md:flex-row md:p-8 rounded-2xl xs:rounded-br-3xl lg:p-12 items-center justify-between md:rounded-3xl border border-solid border-darkish dark:border-blukish bg-bluen dark:bg-bluish rounded-br-2xl shadow-xl p-4'>
+        <article className='w-full relative flex flex-col lg:flex-row md:p-8 rounded-2xl xs:rounded-br-3xl lg:p-12 items-center justify-between md:rounded-3xl border border-solid border-darkish dark:border-blukish bg-bluen dark:bg-bluish rounded-br-2xl shadow-xl p-4'>
             <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] dark:bg-light bg-darkish rounded-br-3xl'>
             </div>
-            <Link href={link} target='_blank' className='md:w-1/2 cursor-pointer overflow-hidden rounded-lg w-full'>
+            <Link href={link} target='_blank' className='lg:w-1/2 cursor-pointer overflow-hidden rounded-lg w-full'>
                 <Image src={img} alt={title} className='w-full h-auto'/> 
             </Link>
-            <div className='md:w-1/2 flex flex-col items-start justify-between md:pl-6 w-full pl-0 sm:pt-6'>
+            <div className='lg:w-1/2 flex flex-col items-start justify-between md:pl-6 w-full pl-0 sm:pt-6'>
                 <span className=' dark:text-blukish font-medium text-xl'>{type}</span>
                 <Link href={link} target='_blank' className='hover:underline underline-offset-2'>
                 <h2 className='my-2 w-full text-left md:text-2xl text-lg font-bold'>{title}</h2>
@@ -64,7 +64,7 @@ const projects = () => {
   return (
     <div id='project' className='px-4 sm:px-8 md:px-12 lg:px-20 bg-backcolor dark:bg-bluish dark:text-light'>
     <motion.h1 className='font-bold text-2xl mb-5' initial={{x:'-300px'}} ref={projectsRef} animate={isProjectsRefInView ? {x:0} : {}} transition={{delay:0.2}}>Portfolio Projects</motion.h1>
-    <div className='grid grid-cols-12 md:gap-24 gap-8 md:gap-y-32 lg:gap-x-16 md:gap-x-8 gap-x-0'>
+    <div className='grid grid-cols-12 md:gap-24 gap-8 md:gap-y-12 lg:gap-x-16 md:gap-x-8 gap-x-0'>
         <div className='col-span-12'>
             <FeaturedProject
             title='Cabinet Manufacturer Website'

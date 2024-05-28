@@ -73,7 +73,7 @@ const navbar = () => {
 
   return (
     <div className='h-full flex items-center bg-backcolor dark:bg-bluish dark:text-light justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48'>
-       <div className='hidden md:flex gap-4 w-1/3 text-xl'>
+       <div className='hidden md:flex gap-4 w-1/3 text-md lg:text-xl'>
         {links.map(link=>(
             <NavLink link={link} key={link.url} className='text-darkish dark:text-light hover:text-gray dark:hover:text-graywhite'>
                 {link.title}

@@ -47,8 +47,8 @@ const Contact = () => {
     animate={{ y: "0%" }}
     transition={{ duration: 1}}
     >
-        <div className='h-full flex flex-col md:flex-row md:p-5 pb-8'>
-            <div className='h-1/2 md:h-full md:w-1/2 flex flex-col items-center justify-between text-2xl md:text-6xl py-8 md:py-48'>
+        <div className='h-full flex flex-col md:flex-row md:py-5 pb-8'>
+            <div className='h-1/2 md:h-full md:w-1/2 flex flex-col items-center justify-between text-2xl md:text-3xl lg:text-6xl py-8 md:py-48'>
                 <div>
                     {text.split('').map((letter, index)=>(
                         <motion.span key={index} initial={{opacity:1}} animate={{opacity:0}} transition={{duration:3, repeat:Infinity, delay: index*0.1, }} className='text-darkish dark:text-light'>
@@ -58,7 +58,7 @@ const Contact = () => {
                 </div>
                 <EngageMe/>
             </div>
-            <form onSubmit={sendEmail} ref={form} className='h-1/2 md:h-full md:w-1/2 bg-bluen rounded-xl text-xl flex flex-col gap-8 justify-center p-8 md:p-24'>
+            <form onSubmit={sendEmail} ref={form} className='h-1/2 md:h-full md:w-1/2 bg-bluen rounded-xl text-xl flex flex-col gap-8 justify-center p-8 md:p-8 lg:p-24'>
                 <span>Dear Derrick,</span>
                 <textarea rows={6} name='user_message' onChange={handleChange} className="bg-transparent border-b-2 border-b-darkish outline-none resize-none"/>
                 <span>My Email Address is:</span>

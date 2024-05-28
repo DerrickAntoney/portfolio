@@ -36,10 +36,10 @@ const Hero = () => {
   return (
     <div className="h-full flex flex-col md:flex-row gap-10 px-4 sm:px-8 md:px-12 bg-backcolor dark:bg-bluish dark:text-light lg:px-20">
         <div className="">
-          <Image src='/profile.png' alt="profile picture" width={300} height={300} className="object-contain rounded-full mx-8 sm:mx-12 md:mx-16 lg:mx-20"/>
+          <Image src='/profile.png' alt="profile picture" width={300} height={300} className="object-contain rounded-full mx-8 md:mx-0 lg:mx-20"/>
         </div>
         <div className=" md:w-[50%] flex flex-col gap-4 md:justify-center">
-          <motion.h1 className="font-bold text-xl md:text-4xl"
+          <motion.h1 className="font-bold text-xl md:text-2xl lg:4xl"
           variants={quote}
           >
            {
@@ -57,7 +57,7 @@ const Hero = () => {
            }
           </motion.h1>
           <p className="">
-            I'm a professional Fullstack Developer and UX Designer. 
+            I'm a professional Fullstack Developer. 
             I help businesses to craft user-centered interfaces that meet business needs. 
           </p>
           <p>

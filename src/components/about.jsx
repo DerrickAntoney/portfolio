@@ -44,7 +44,7 @@ const About = () => {
         <div className='px-4 sm:px-8 md:px-12 lg:px-20 flex flex-col gap-12 md:gap-16 lg:gap-24 lg:w-2/3 xl:1/2'>
             <div className='flex flex-col gap-12 justify-center mt-20'>
                 <h1 className='font-bold text-2xl'>BIOGRAPHY</h1>
-                <p className='text-lg'>As a designer, I love to create design which speaks, keep it clean, minimal and simple. I design web and mobile applications</p>
+                <p className='text-lg'>Coming from UX/UI background, I love to create design which speaks, keep it clean, minimal and simple. I design web and mobile applications</p>
                 <p className='text-lg'>As a developer, I value business or brand for which i'm creating.</p>
                 <div className='self-end'>
                     {mode === 'dark' ? (<Image src='/signlight.svg' alt='signature' width={100} height={100}/>) :
